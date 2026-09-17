@@ -1,23 +1,34 @@
-# Documentation de démarrage
+# Bus Network Optimizer
 
-Ce fichier explique comment lancer les différents projets de la solution `sae.sln` avec Visual Studio.
+C application for managing bus routes, searching data, and optimizing network profitability through passenger reassignment.
 
-## 1. Ouvrir le projet
-1. Double-cliquez sur le fichier **`sae.sln`** situé à la racine du dossier.
-2. Attendez que Visual Studio charge complètement la solution.
+Overview
+This project implements a C application to process bus route datasets, manage passenger bookings, and optimize network profitability. The application includes search, sorting, and a greedy algorithm that cancels deficit routes and automatically reassigns passengers to alternative buses. It also includes an empirical complexity analysis build.
 
-## 2. Choisir le projet à lancer
-La solution contient deux projets distincts : **`sae`** et **`sae-comp`**. Vous devez indiquer à Visual Studio lequel vous souhaitez exécuter.
+What I worked on
+Developing the application in C
+Parsing and exporting CSV route datasets
+Implementing multi-criteria searching and filtering algorithms
+Implementing sorting algorithms (Insertion Sort and QuickSort)
+Developing an optimization algorithm to reassign passengers and maximize revenue
+Profiling and analyzing algorithmic time complexity (O(n) vs O(n^2))
+Working collaboratively with Git and Visual Studio
 
-1. Regardez le panneau **Explorateur de solutions** (généralement situé à droite de l'écran).
-   - *Si vous ne le voyez pas :* Cliquez sur le menu **Affichage** (en haut), puis sélectionnez **Explorateur de solutions**.
-2. **Faites un clic-droit** sur le nom du projet que vous voulez tester (soit `sae`, soit `sae-comp`).
-3. Dans la liste qui apparaît, cliquez sur l'option **Définir comme projet de démarrage**.
-   - **Vérification :** Le nom du projet choisi doit maintenant apparaître en **gras** dans la liste.
+Technologies
+C Visual Studio CSV Git / GitLab
 
-## 3. Lancer l'exécution
-Une fois le projet défini comme démarrage (en gras) :
+Project structure
+sae
+Main interactive application source files and logic.
 
-1. Repérez le bouton avec une **flèche verte pleine** situé dans la barre d'outils en haut (souvent marqué "Débogueur Windows Local" ou juste "Démarrer").
+sae-comp
+Instrumented application used for empirical complexity benchmarking.
 
-Une fenêtre noire (la console) va s'ouvrir.
+data
+CSV datasets used for production and performance benchmarking.
+
+docs
+Technical report on algorithmic complexity and test results.
+
+Context
+This project was developed as part of my BUT Informatique coursework at Université Claude Bernard Lyon 1.
